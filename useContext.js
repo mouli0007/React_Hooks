@@ -1,6 +1,8 @@
 
 A Simple Context api || UseContext Code Structure
 
+Drabacks : => If you use Multiple States if one state changes every state will trigger a re render 
+
 import "./styles.css";
 import React, { useState, createContext, useContext, Children } from "react";
 
