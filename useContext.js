@@ -30,7 +30,9 @@ export default function App({ children }) {
     userInfo,
     setUserInfo,
     isAuth,
-    setAuth
+    setAuth,
+    logout,
+    login
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
