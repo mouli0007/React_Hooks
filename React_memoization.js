@@ -1,5 +1,10 @@
-//  UseMemo vs UseCallback !
+
 //  React memo
+
+
+React.memo It Only works Weel when you have a primitive value for the props 
+
+For Object and arrays we have to use UseCallback and UseMemo in some cases 
 
 import { useState, memo } from "react";
 
