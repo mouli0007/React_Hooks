@@ -34,3 +34,23 @@ const person = useMemo(() => {
     fullName: `${first} ${last}`,
   };
 }, [first, last]);
+
+
+
+//  Use memo refernce Example 
+
+const [dark, setDark] = useState(false);
+
+const themeStyles = useMemo<boolean>((): any => {
+  return {
+    backgroundColor: dark ? "black" : "White",
+    color: dark ? "White" : "blacj",
+  };
+}, [dark]);
+
+// UseEffect will reference the old themeStyle and the new themestyle
+// Since we are using useMemo the reference of the objects will not change so it will not cause any kind of additional re render
+useEffect(() => {
+  console.log("Theme Changed ");
+}, [themeStyles]);
+
