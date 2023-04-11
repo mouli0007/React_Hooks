@@ -54,3 +54,34 @@ useEffect(() => {
   console.log("Theme Changed ");
 }, [themeStyles]);
 
+###################################
+##################################
+// Another Example 
+
+
+import React, { memo, useMemo } from "react";
+
+const Memo = ({ color }) => {
+  return <div style={{ backgroundColor: color }}>Memo</div>;
+};
+
+const Memoized = memo(Memo);
+
+import React from "react";
+
+const UseMemo_ = ({ arr }) => {
+  return <div>Sorted Value is :{arr}</div>;
+};
+
+const Home = () => {
+  const arr = [1, 2, 3, 4, 5];
+  const newArr = useMemo(() => {
+    return [...arr].reduce((tot, acc) => tot + acc, 0);
+  }, [arr]);
+  return (
+    <>
+      <Memoized color={color} />
+      <UseMemo_ newArr={newArr} />
+    </>
+  );
+};
